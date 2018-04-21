@@ -14,25 +14,19 @@ namespace ControlWork
         public static bool Add { get; set; }
     }
 
-    public class Err
-    {
-        public Point point { get; set; }
-        public System.Exception exception { get; set; }
-    }
-
     public class MatrixPlus
     {
         public double Min { get; private set; }
         public double Max { get; private set; }
         public double[,] Matrix { get; private set; }
-        public List<Err> errs { get; private set; }
+        public Dictionary<Point, System.Exception> errs { get; private set; }
 
         public void New(int x, int y, double kor)
         {
             Min = double.MaxValue;
             Max = double.MinValue;
             Matrix = new double[x, y];
-            errs = new List<Err>();
+            errs = new Dictionary<Point, System.Exception>();
 
             for (int i = 0; i < x; i++)
             {
@@ -50,8 +44,7 @@ namespace ControlWork
                     }
                     catch (System.Exception ex)
                     {
-                        Err err = new Err { exception = ex, point = new Point(i, j)};
-                        errs.Add(err);
+                        errs.Add(new Point(i, j), ex);
                     }
                 }
             }

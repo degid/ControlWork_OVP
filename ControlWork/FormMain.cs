@@ -86,10 +86,10 @@ namespace ControlWork
                 }
             }
 
-            foreach (Err error in matrixPlus.errs)
+            foreach (var error in matrixPlus.errs)
             {
-                dataGridView.Rows[error.point.X].Cells[error.point.Y].Style.BackColor = Color.Pink;
-                dataGridView.Rows[error.point.X].Cells[error.point.Y].Value = error.exception.Message;
+                dataGridView.Rows[error.Key.X].Cells[error.Key.Y].Style.BackColor = Color.Pink;
+                dataGridView.Rows[error.Key.X].Cells[error.Key.Y].Value = error.Value.Message;
             }
         }
 

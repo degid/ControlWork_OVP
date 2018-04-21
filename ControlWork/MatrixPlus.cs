@@ -18,6 +18,7 @@ namespace ControlWork
     {
         public double Min { get; private set; }
         public double Max { get; private set; }
+
         public double[,] Matrix { get; private set; }
         public Dictionary<Point, System.Exception> errs { get; private set; }
 
@@ -50,7 +51,7 @@ namespace ControlWork
             }
         }
 
-        public void New(double kor = 1)
+        public MatrixPlus(double kor = 1)
         {
             New(Data.X, Data.Y, kor);
         }
@@ -58,7 +59,7 @@ namespace ControlWork
         public static MatrixPlus operator /(MatrixPlus matrixPlus, double razn)
         {
             MatrixPlus matrix = new MatrixPlus { Matrix = matrixPlus.Matrix };
-            matrix.New(razn);
+            matrix.New(Data.X, Data.Y, razn);
             return matrix;
         }
     }

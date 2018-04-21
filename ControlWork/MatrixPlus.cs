@@ -24,24 +24,29 @@ namespace ControlWork
     {
         public double Min { get; private set; }
         public double Max { get; private set; }
-        public double[][] Matrix { get; private set; }
+        public double[,] Matrix { get; private set; }
         public List<Err> errs { get; private set; }
 
         public void New(int x, int y, double kor)
         {
             Min = double.MaxValue;
             Max = double.MinValue;
-            Matrix = new double[x][];
+            Matrix = new double[x, y];
             errs = new List<Err>();
 
             for (int i = 0; i < x; i++)
             {
-                Matrix[i] = new double[y];
                 for (int j = 0; j < y; j++)
                 {
                     try
                     {
-                        Matrix[i][j] = (Data.A / (Data.B + i * i) - Data.C * i * j) / kor;
+                        Matrix[i, j] = (Data.A / (Data.B + i * i) - Data.C * i * j) / kor;
+
+                        if (Min > Matrix[i, j])
+                            Min = Matrix[i, j];
+
+                        if (Max < Matrix[i, j])
+                            Max = Matrix[i, j];
                     }
                     catch (System.Exception ex)
                     {
@@ -49,12 +54,6 @@ namespace ControlWork
                         errs.Add(err);
                     }
                 }
-
-                if (Min > Matrix[i].Min())
-                    Min = Matrix[i].Min();
-
-                if (Max < Matrix[i].Max())
-                    Max = Matrix[i].Max();
             }
         }
 

@@ -76,13 +76,13 @@ namespace ControlWork
                         dataGridView.Columns[j].HeaderText = (j + 1).ToString();
                     }
 
-                    if (double.IsInfinity(matrixPlus.Matrix[i][j])
-                        || double.IsNaN(matrixPlus.Matrix[i][j]))
+                    if (double.IsInfinity(matrixPlus.Matrix[i, j])
+                        || double.IsNaN(matrixPlus.Matrix[i, j]))
                     {
                         dataGridView.Rows[i].Cells[j].Style.BackColor = Color.Pink;
                     }
 
-                    dataGridView.Rows[i].Cells[j].Value = matrixPlus.Matrix[i][j];
+                    dataGridView.Rows[i].Cells[j].Value = matrixPlus.Matrix[i, j];
                 }
             }
 

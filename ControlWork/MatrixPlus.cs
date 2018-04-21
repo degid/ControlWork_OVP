@@ -1,11 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ControlWork
 {
@@ -21,8 +16,7 @@ namespace ControlWork
 
     public class Err
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public Point point { get; set; }
         public System.Exception exception { get; set; }
     }
 
@@ -51,7 +45,7 @@ namespace ControlWork
                     }
                     catch (System.Exception ex)
                     {
-                        Err err = new Err { X = i, Y = j, exception = ex };
+                        Err err = new Err { exception = ex, point = new Point(i, j)};
                         errs.Add(err);
                     }
                 }

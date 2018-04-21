@@ -86,25 +86,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\floydc.ttf" />
-    <None Include="Resources\lmroman10-italic.otf" />
-    <None Include="Resources\LMRoman10-Italic2.ttf" />
-    <None Include="Resources\lmroman10-italicv2.otf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Image1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\formula_verdana.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\formula_verdana_12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\matrix.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\matrix_verdana.png" />

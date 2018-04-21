@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace ControlWork
 {
@@ -78,7 +79,7 @@ namespace ControlWork
                     if (double.IsInfinity(matrixPlus.Matrix[i][j])
                         || double.IsNaN(matrixPlus.Matrix[i][j]))
                     {
-                        dataGridView.Rows[i].Cells[j].Style.BackColor = System.Drawing.Color.Pink;
+                        dataGridView.Rows[i].Cells[j].Style.BackColor = Color.Pink;
                     }
 
                     dataGridView.Rows[i].Cells[j].Value = matrixPlus.Matrix[i][j];
@@ -87,8 +88,8 @@ namespace ControlWork
 
             foreach (Err error in matrixPlus.errs)
             {
-                dataGridView.Rows[error.X].Cells[error.Y].Style.BackColor = System.Drawing.Color.Pink;
-                dataGridView.Rows[error.X].Cells[error.Y].Value = error.exception.Message;
+                dataGridView.Rows[error.point.X].Cells[error.point.Y].Style.BackColor = Color.Pink;
+                dataGridView.Rows[error.point.X].Cells[error.point.Y].Value = error.exception.Message;
             }
         }
 

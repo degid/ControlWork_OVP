@@ -61,52 +61,12 @@ namespace ControlWork.Properties {
         }
         
         /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] floydc {
-            get {
-                object obj = ResourceManager.GetObject("floydc", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap formula_verdana {
-            get {
-                object obj = ResourceManager.GetObject("formula_verdana", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap formula_verdana_12 {
             get {
                 object obj = ResourceManager.GetObject("formula_verdana_12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] LMRoman10_Italic {
-            get {
-                object obj = ResourceManager.GetObject("LMRoman10_Italic", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Byte[].
-        /// </summary>
-        internal static byte[] lmroman10_italic1 {
-            get {
-                object obj = ResourceManager.GetObject("lmroman10_italic1", resourceCulture);
-                return ((byte[])(obj));
             }
         }
         

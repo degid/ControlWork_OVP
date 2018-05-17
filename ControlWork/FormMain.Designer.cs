@@ -46,6 +46,13 @@
             this.dtGridView_Source = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dtGridView_Pb3 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_Memory = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label_Time = new System.Windows.Forms.Label();
+            this.label_X = new System.Windows.Forms.Label();
+            this.label_Y = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridView_Source)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -80,6 +87,9 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label_Y);
+            this.groupBox1.Controls.Add(this.label_X);
             this.groupBox1.Controls.Add(this.label_C);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label_B);
@@ -96,7 +106,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(663, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(125, 190);
+            this.groupBox1.Size = new System.Drawing.Size(125, 213);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Матрица";
@@ -105,7 +115,7 @@
             // label_C
             // 
             this.label_C.AutoSize = true;
-            this.label_C.Location = new System.Drawing.Point(51, 97);
+            this.label_C.Location = new System.Drawing.Point(51, 116);
             this.label_C.MaximumSize = new System.Drawing.Size(70, 13);
             this.label_C.Name = "label_C";
             this.label_C.Size = new System.Drawing.Size(16, 13);
@@ -117,7 +127,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(14, 97);
+            this.label6.Location = new System.Drawing.Point(14, 116);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(15, 13);
             this.label6.TabIndex = 12;
@@ -127,7 +137,7 @@
             // label_B
             // 
             this.label_B.AutoSize = true;
-            this.label_B.Location = new System.Drawing.Point(51, 73);
+            this.label_B.Location = new System.Drawing.Point(51, 92);
             this.label_B.MaximumSize = new System.Drawing.Size(70, 13);
             this.label_B.Name = "label_B";
             this.label_B.Size = new System.Drawing.Size(16, 13);
@@ -139,7 +149,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(14, 73);
+            this.label3.Location = new System.Drawing.Point(14, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(15, 13);
             this.label3.TabIndex = 10;
@@ -149,7 +159,7 @@
             // label_A
             // 
             this.label_A.AutoSize = true;
-            this.label_A.Location = new System.Drawing.Point(51, 49);
+            this.label_A.Location = new System.Drawing.Point(51, 68);
             this.label_A.MaximumSize = new System.Drawing.Size(70, 13);
             this.label_A.Name = "label_A";
             this.label_A.Size = new System.Drawing.Size(16, 13);
@@ -161,7 +171,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(14, 49);
+            this.label7.Location = new System.Drawing.Point(14, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(15, 13);
             this.label7.TabIndex = 8;
@@ -171,7 +181,7 @@
             // label_P
             // 
             this.label_P.AutoSize = true;
-            this.label_P.Location = new System.Drawing.Point(51, 169);
+            this.label_P.Location = new System.Drawing.Point(51, 188);
             this.label_P.MaximumSize = new System.Drawing.Size(70, 13);
             this.label_P.Name = "label_P";
             this.label_P.Size = new System.Drawing.Size(16, 13);
@@ -183,7 +193,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(14, 169);
+            this.label5.Location = new System.Drawing.Point(14, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(15, 13);
             this.label5.TabIndex = 6;
@@ -194,7 +204,7 @@
             // label_Max
             // 
             this.label_Max.AutoSize = true;
-            this.label_Max.Location = new System.Drawing.Point(51, 145);
+            this.label_Max.Location = new System.Drawing.Point(51, 164);
             this.label_Max.MaximumSize = new System.Drawing.Size(70, 13);
             this.label_Max.Name = "label_Max";
             this.label_Max.Size = new System.Drawing.Size(16, 13);
@@ -206,7 +216,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(11, 145);
+            this.label4.Location = new System.Drawing.Point(11, 164);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 4;
@@ -216,7 +226,7 @@
             // label_Min
             // 
             this.label_Min.AutoSize = true;
-            this.label_Min.Location = new System.Drawing.Point(51, 121);
+            this.label_Min.Location = new System.Drawing.Point(51, 140);
             this.label_Min.MaximumSize = new System.Drawing.Size(70, 13);
             this.label_Min.Name = "label_Min";
             this.label_Min.Size = new System.Drawing.Size(16, 13);
@@ -228,7 +238,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(11, 121);
+            this.label1.Location = new System.Drawing.Point(11, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 2;
@@ -284,17 +294,93 @@
             this.dtGridView_Pb3.TabIndex = 0;
             this.dtGridView_Pb3.UseWaitCursor = true;
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 425);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Memory:";
+            this.label2.UseWaitCursor = true;
+            // 
+            // label_Memory
+            // 
+            this.label_Memory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_Memory.AutoSize = true;
+            this.label_Memory.Location = new System.Drawing.Point(69, 425);
+            this.label_Memory.Name = "label_Memory";
+            this.label_Memory.Size = new System.Drawing.Size(16, 13);
+            this.label_Memory.TabIndex = 4;
+            this.label_Memory.Text = "...";
+            this.label_Memory.UseWaitCursor = true;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(109, 425);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(33, 13);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Time:";
+            this.label8.UseWaitCursor = true;
+            // 
+            // label_Time
+            // 
+            this.label_Time.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_Time.AutoSize = true;
+            this.label_Time.Location = new System.Drawing.Point(149, 425);
+            this.label_Time.Name = "label_Time";
+            this.label_Time.Size = new System.Drawing.Size(16, 13);
+            this.label_Time.TabIndex = 6;
+            this.label_Time.Text = "...";
+            this.label_Time.UseWaitCursor = true;
+            // 
+            // label_X
+            // 
+            this.label_X.AutoSize = true;
+            this.label_X.Location = new System.Drawing.Point(24, 49);
+            this.label_X.Name = "label_X";
+            this.label_X.Size = new System.Drawing.Size(14, 13);
+            this.label_X.TabIndex = 14;
+            this.label_X.Text = "X";
+            // 
+            // label_Y
+            // 
+            this.label_Y.AutoSize = true;
+            this.label_Y.Location = new System.Drawing.Point(77, 49);
+            this.label_Y.Name = "label_Y";
+            this.label_Y.Size = new System.Drawing.Size(14, 13);
+            this.label_Y.TabIndex = 15;
+            this.label_Y.Text = "Y";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(53, 49);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(12, 13);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "x";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_Time);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label_Memory);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button_exit);
-            this.MinimumSize = new System.Drawing.Size(450, 282);
+            this.MinimumSize = new System.Drawing.Size(450, 305);
             this.Name = "FormMain";
-            this.Text = "Контрольная работа. Вариант №2";
+            this.Text = "Контрольная работа по ОВР. Разработка проектов для ввода, отображения и обработки" +
+    " элементов матриц. Вариант №2";
             this.UseWaitCursor = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -304,6 +390,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridView_Pb3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -327,6 +414,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label_B;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_Memory;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label_Time;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label_Y;
+        private System.Windows.Forms.Label label_X;
     }
 }
 

@@ -36,8 +36,13 @@ namespace ControlWork
             if (Data.Add)
             {
                 MatrixPlus mp = new MatrixPlus { };
+                label_Memory.Text = mp.Memory.ToString();
+                label_Time.Text = mp.Time.ToString();
+
                 LoadDataGrid(dtGridView_Source, mp);
 
+                label_X.Text = Data.X.ToString();
+                label_Y.Text = Data.Y.ToString();
                 label_A.Text = Data.A.ToString();
                 label_B.Text = Data.B.ToString();
                 label_C.Text = Data.C.ToString();

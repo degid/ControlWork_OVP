@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace ControlWork
 {
@@ -21,6 +22,7 @@ namespace ControlWork
             if ((e.KeyChar < '0' || e.KeyChar > '9')
                 && e.KeyChar != '\b'
                 && e.KeyChar != ','
+                && e.KeyChar != '.'
                 && e.KeyChar != '-')
                 e.Handled = true;
         }
@@ -44,11 +46,21 @@ namespace ControlWork
             {
                 Data.X = int.Parse(textBox_i.Text);
                 Data.Y = int.Parse(textBox_j.Text);
-                Data.A = double.Parse(textBox_A.Text);
-                Data.B = double.Parse(textBox_B.Text);
-                Data.C = double.Parse(textBox_C.Text);
-                Data.Add = true;
-                Close();
+                try
+                {
+                    Data.A = double.Parse(textBox_A.Text, CultureInfo.InvariantCulture);
+                    Data.B = double.Parse(textBox_B.Text, CultureInfo.InvariantCulture);
+                    Data.C = double.Parse(textBox_C.Text, CultureInfo.InvariantCulture);
+                    Data.Add = true;
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка в задании параметра A, B или C.\n" + ex.Message,
+                        "Ошибка",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Drawing;
+using System.Diagnostics;
 
 namespace ControlWork
 {
@@ -13,21 +13,32 @@ namespace ControlWork
         public static double C { get; set; }
         public static bool Add { get; set; }
     }
-
+    
     public class MatrixPlus
     {
         public double Min { get; private set; }
         public double Max { get; private set; }
-
         public double[,] Matrix { get; private set; }
         public Dictionary<Point, System.Exception> errs { get; private set; }
 
-        public void New(int x, int y, double kor)
+        public double Memory { get; private set; }
+        public long Time { get; private set; }
+
+        internal void New(int x, int y, double kor)
         {
             Min = double.MaxValue;
             Max = double.MinValue;
-            Matrix = new double[x, y];
+
+            var timer = new Stopwatch();
+            var before = System.GC.GetTotalMemory(false);
+            timer.Start();
+
+            Matrix = new double[x,y];
             errs = new Dictionary<Point, System.Exception>();
+            /*checked
+            {
+
+            }*/
 
             for (int i = 0; i < x; i++)
             {
@@ -35,8 +46,7 @@ namespace ControlWork
                 {
                     try
                     {
-                        Matrix[i, j] = (Data.A / (Data.B + i * i) - Data.C * i * j) / kor;
-
+                        Matrix[i,j] = (Data.A / (Data.B + i * i) - Data.C * i * j) / kor;
                         if (Min > Matrix[i, j])
                             Min = Matrix[i, j];
 
@@ -49,6 +59,10 @@ namespace ControlWork
                     }
                 }
             }
+            var after = System.GC.GetTotalMemory(false);
+            timer.Stop();
+            Memory = (double)(after - before);
+            Time = timer.ElapsedMilliseconds;
         }
 
         public MatrixPlus(double kor = 1)
